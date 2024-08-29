@@ -3,12 +3,12 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #b8b9b9;
-    color: #353434;
+    background-color: #555858;
+    color: #574c4c;
 }
 
 header {
-    background-color: #111;
+    background-color: #111; 
     color: #494545;
     padding: 1.5em 0;
     text-align: center;
@@ -115,7 +115,7 @@ form button {
 form button:hover {
     background:#b8b9b9
     }
-    
+  
     #collection {
         max-width: 1200px;
         margin: 0 auto;
@@ -212,4 +212,3 @@ form button:hover {
             font-size: 1.5em;
             margin: 10px 0;
         }
-      
