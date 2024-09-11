@@ -1,0 +1,22 @@
+// Mixin para botones
+@mixin button-style($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding-small $padding-medium;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background-color: $secondary-bg-color;
+    }
+  }
+  
+  @mixin image-style
+  ($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
