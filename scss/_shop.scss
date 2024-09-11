@@ -1,0 +1,153 @@
+$primary-bg-color: #111;
+$secondary-bg-color: #b8b9b9;
+$text-color: #574c4c;
+$light-gray: #555858;
+$light-text: #6d6565;
+$highlight-color: #e74c3c;
+
+
+$font-family: 'Helvetica Neue', Arial, sans-serif;
+$header-font-size: 2.5em;
+$body-font-size: 1.1em;
+$base-line-height: 1.6;
+$letter-spacing: 10px;
+
+
+$padding-small: 0.8em;
+$padding-medium: 1.5em;
+$padding-large: 3em;
+$border-radius: 8px;
+@mixin button-style($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding-small $padding-medium;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background-color: $secondary-bg-color;
+    }
+  }
+  
+  @mixin image-style
+  ($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    border-radius: $border-radius;
+
+  }
+  body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    background-color: $light-gray;
+    color: $text-color;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    }
+  
+    li {
+      margin: 10px;
+    }
+    header {
+        background-color: $primary-bg-color;
+        color: $text-color;
+        padding: $padding-medium 0;
+        text-align: center;
+  }    
+  main {
+    padding: $padding-large $padding-medium;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    background-color: $secondary-bg-color;
+  
+    section {
+      margin-bottom: $padding-large;
+      
+      p {
+        font-size: $body-font-size;
+        line-height: $base-line-height;
+        color: darken($text-color, 10%);
+      }
+    }
+  }
+  
+  footer {
+    color: rgba($text-color, 0.5);
+    text-align: center;
+    padding: $padding-medium 0;
+    background-color: $primary-bg-color;
+    margin-top: auto;
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+  
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media screen and (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  
+    .grid-item {
+      background: #fff;
+      padding: $padding-small;
+      text-align: center;
+      border-radius: $border-radius;
+    }
+  
+    .grid-image {
+      @include image-style(100%, 300px);
+    }
+  }
+  
+  .price {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+    color: $light-gray;
+    font-weight: $light-gray;
+    background: lighten($secondary-bg-color, 20%);
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    
+    th, td {
+      border: 1px solid darken($secondary-bg-color, 20%);
+      padding: $padding-small;
+      text-align: center;
+    }
+    
+    th {
+      background-color: darken($secondary-bg-color, 20%);
+    }
+  
+    caption {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+  }
+  @mixin image-style($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+  

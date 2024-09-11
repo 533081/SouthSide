@@ -1,0 +1,103 @@
+$primary-bg-color: #111;
+$secondary-bg-color: #b8b9b9;
+$text-color: #574c4c;
+$light-gray: #555858;
+$light-text: #6d6565;
+$highlight-color: #e74c3c;
+
+
+$font-family: 'Helvetica Neue', Arial, sans-serif;
+$header-font-size: 2.5em;
+$body-font-size: 1.1em;
+$base-line-height: 1.6;
+$letter-spacing: 10px;
+
+
+$padding-small: 0.8em;
+$padding-medium: 1.5em;
+$padding-large: 3em;
+$border-radius: 8px;
+
+@mixin button-style($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding-small $padding-medium;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background-color: $secondary-bg-color;
+    }
+  }
+  
+  @mixin image-style
+  ($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    background-color: $light-gray;
+    color: $text-color;
+  }
+  header {
+    color: $text-color;
+    text-align: center;
+    padding: 20px 0;
+    }
+    h1 {
+      font-size: 3rem;
+      color: $text-color;
+      margin: 0;
+    }
+ nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+ }
+    li {
+ margin: 10px;
+ }
+      a {
+  color: $light-text;
+  text-decoration: none;
+  font-size: $body-font-size;
+        font-weight: 300;
+        transition: color 0.3s;
+      }
+    
+
+  main {
+    padding: $padding-large $padding-medium;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+      background-color: $secondary-bg-color;
+      }
+    section {
+    margin-bottom: $padding-large;
+    }
+        p {
+          font-size: $body-font-size;
+    line-height: $base-line-height; 
+    color: darken($text-color, 10%);
+        } 
+        .gallery-image {
+@include image-style(100%, auto); 
+}
+footer {
+    color: rgba($text-color, 0.5);
+  text-align: center;
+  padding: $padding-medium 0;
+  background-color: $primary-bg-color;
+    margin-top: auto;
+  }
+
