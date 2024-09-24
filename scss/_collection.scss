@@ -11,6 +11,7 @@ $header-font-size: 2.5em;
 $body-font-size: 1.1em;
 $base-line-height: 1.6;
 $letter-spacing: 10px;
+$hover-btn-color: #323232;
 
 
 $padding-small: 0.8em;
@@ -45,14 +46,14 @@ body {
     color: $text-color;
     padding: $padding-medium 0;
     text-align: center;
-  
-    h1  h3 {
-      margin: 0;
-      font-size: $header-font-size;
-      font-weight: bold;
-      letter-spacing: $letter-spacing;
+
+    h1, h3 {
+        margin: 0;
+        font-size: $header-font-size;
+        font-weight: bold;
+        letter-spacing: $letter-spacing;
     }
-  }
+}
   nav ul {
     list-style: none;
     display: flex;
@@ -60,14 +61,9 @@ body {
     padding: 0;
     margin: 0;
 }
-    li {
-    margin: 10px;
-
-
-    }
-    li {
-        margin: 10px;
-        }
+li {
+  margin: 10px;
+}
         main {
             padding: $padding-large $padding-medium;
             text-align: center;
@@ -91,15 +87,16 @@ body {
           background-color: $primary-bg-color;
             margin-top: auto;
           }
-          .carousel {
-            width: $carousel-width;
-            height: $carousel-height;
-            margin: 0 auto;
+          .carousel-inner img {
+            width: 100%; 
+            height: auto; 
         }
-        .carousel-inner img {
-          width: 100%;
-          height: auto;
-      }
+        
+        .carousel-item {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
       
           img {
             
@@ -112,8 +109,8 @@ body {
     width: 50px;
     }
    
-  .btn:hover {
-      background-color: #323232; 
+    .btn:hover {
+      background-color: $hover-btn-color; 
       transform: scale(1.1); 
   }
   
