@@ -1,0 +1,94 @@
+
+@mixin button-style($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding-small $padding-medium;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background-color: $secondary-bg-color;
+    }
+  }
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    background-color: $light-gray;
+    color: $text-color;
+  }
+  header {
+    background-color: $primary-bg-color;
+    color: $text-color;
+    padding: $padding-medium 0;
+    text-align: center;
+
+    h1, h3 {
+        margin: 0;
+        font-size: $header-font-size;
+        font-weight: bold;
+        letter-spacing: $letter-spacing;
+    }
+}
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+li {
+  margin: 10px;
+}
+        main {
+            padding: $padding-large $padding-medium;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+              background-color: $secondary-bg-color;
+              }
+            section {
+            margin-bottom: $padding-large;
+            }
+                p {
+                  font-size: $body-font-size;
+            line-height: $base-line-height; 
+            color: darken($text-color, 10%);
+                } 
+     
+        footer {
+            color: rgba($text-color, 0.5);
+          text-align: center;
+          padding: $padding-medium 0;
+          background-color: $primary-bg-color;
+            margin-top: auto;
+          }
+          .carousel-inner img {
+            width: 100%; 
+            height: auto; 
+        }
+        
+        .carousel-item {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+      
+          img {
+            
+              max-width: 100%;
+              height: auto;
+            
+            }
+            .carousel-control-prev,.carousel-control-next{
+    height: 100%;
+    width: 50px;
+    }
+   
+    .btn:hover {
+      background-color: $hover-btn-color; 
+      transform: scale(1.1); 
+  }
